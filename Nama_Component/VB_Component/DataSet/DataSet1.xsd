@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="reonetfi_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="reonetfi_dbConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.VB_Component.My.MySettings.GlobalReference.Default.reonetfi_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sec_GroupTableAdapter" GeneratorDataComponentClassName="sec_GroupTableAdapter" Name="sec_Group" UserDataComponentName="sec_GroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="reonetfi_dbConnectionString (MySettings)" DbObjectName="reonetfi_db.dbo.sec_Group" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Srl, GroupName AS [GroupName], UsersBlocked AS AccessDenied, JoinBlocked AS JoinBlocked FROM            sec_Group</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Srl" DataSetColumn="Srl" />
+              <Mapping SourceColumn="GroupName" DataSetColumn="GroupName" />
+              <Mapping SourceColumn="AccessDenied" DataSetColumn="AccessDenied" />
+              <Mapping SourceColumn="JoinBlocked" DataSetColumn="JoinBlocked" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sec_UserTableAdapter" GeneratorDataComponentClassName="sec_UserTableAdapter" Name="sec_User" UserDataComponentName="sec_UserTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="reonetfi_dbConnectionString (MySettings)" DbObjectName="reonetfi_db.dbo.sec_User" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Srl, FirstName AS Name,
+LastName AS Family, 
+Username AS USername,
+Enabled AS Active
+FROM            sec_User</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Srl" DataSetColumn="Srl" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Family" DataSetColumn="Family" />
+              <Mapping SourceColumn="USername" DataSetColumn="USername" />
+              <Mapping SourceColumn="Active" DataSetColumn="Active" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sec_RoleTableAdapter" GeneratorDataComponentClassName="sec_RoleTableAdapter" Name="sec_Role" UserDataComponentName="sec_RoleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="reonetfi_dbConnectionString (MySettings)" DbObjectName="reonetfi_db.dbo.sec_Role" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Srl, RoleName AS RoleTitle 
+FROM            sec_Role</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Srl" DataSetColumn="Srl" />
+              <Mapping SourceColumn="RoleTitle" DataSetColumn="RoleTitle" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sec_RoleGroupTableAdapter" GeneratorDataComponentClassName="sec_RoleGroupTableAdapter" Name="sec_RoleGroup" UserDataComponentName="sec_RoleGroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="reonetfi_dbConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        sec_RoleGroup.Srl, sec_RoleGroup.Srl_Role, sec_Role.RoleName
+FROM            sec_RoleGroup INNER JOIN
+                         sec_Role ON sec_RoleGroup.Srl_Role = sec_Role.Srl
+WHERE        (sec_RoleGroup.Srl_Group = @Srl_Group)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Srl_Group" ColumnName="Srl_Group" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Srl_Group" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Srl_Group" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RoleName" DataSetColumn="RoleName" />
+              <Mapping SourceColumn="Srl" DataSetColumn="Srl" />
+              <Mapping SourceColumn="Srl_Role" DataSetColumn="Srl_Role" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sec_Group" msprop:Generator_TableClassName="sec_GroupDataTable" msprop:Generator_RowEvArgName="sec_GroupRowChangeEvent" msprop:Generator_TableVarName="tablesec_Group" msprop:Generator_TablePropName="sec_Group" msprop:Generator_RowDeletingName="sec_GroupRowDeleting" msprop:Generator_RowChangingName="sec_GroupRowChanging" msprop:Generator_RowEvHandlerName="sec_GroupRowChangeEventHandler" msprop:Generator_RowDeletedName="sec_GroupRowDeleted" msprop:Generator_RowChangedName="sec_GroupRowChanged" msprop:Generator_UserTableName="sec_Group" msprop:Generator_RowClassName="sec_GroupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Srl" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSrl" msprop:Generator_ColumnPropNameInRow="Srl" msprop:Generator_ColumnPropNameInTable="SrlColumn" msprop:Generator_UserColumnName="Srl" type="xs:int" />
+              <xs:element name="GroupName" msprop:Generator_ColumnVarNameInTable="columnGroupName" msprop:Generator_ColumnPropNameInRow="GroupName" msprop:Generator_ColumnPropNameInTable="GroupNameColumn" msprop:Generator_UserColumnName="GroupName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccessDenied" msprop:Generator_ColumnVarNameInTable="columnAccessDenied" msprop:Generator_ColumnPropNameInRow="AccessDenied" msprop:Generator_ColumnPropNameInTable="AccessDeniedColumn" msprop:Generator_UserColumnName="AccessDenied" type="xs:boolean" minOccurs="0" />
+              <xs:element name="JoinBlocked" msprop:Generator_ColumnVarNameInTable="columnJoinBlocked" msprop:Generator_ColumnPropNameInRow="JoinBlocked" msprop:Generator_ColumnPropNameInTable="JoinBlockedColumn" msprop:Generator_UserColumnName="JoinBlocked" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sec_User" msprop:Generator_TableClassName="sec_UserDataTable" msprop:Generator_RowEvArgName="sec_UserRowChangeEvent" msprop:Generator_TableVarName="tablesec_User" msprop:Generator_TablePropName="sec_User" msprop:Generator_RowDeletingName="sec_UserRowDeleting" msprop:Generator_RowChangingName="sec_UserRowChanging" msprop:Generator_RowEvHandlerName="sec_UserRowChangeEventHandler" msprop:Generator_RowDeletedName="sec_UserRowDeleted" msprop:Generator_RowChangedName="sec_UserRowChanged" msprop:Generator_UserTableName="sec_User" msprop:Generator_RowClassName="sec_UserRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Srl" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSrl" msprop:Generator_ColumnPropNameInRow="Srl" msprop:Generator_ColumnPropNameInTable="SrlColumn" msprop:Generator_UserColumnName="Srl" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Family" msprop:Generator_ColumnVarNameInTable="columnFamily" msprop:Generator_ColumnPropNameInRow="Family" msprop:Generator_ColumnPropNameInTable="FamilyColumn" msprop:Generator_UserColumnName="Family" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="USername" msprop:Generator_ColumnVarNameInTable="columnUSername" msprop:Generator_ColumnPropNameInRow="USername" msprop:Generator_ColumnPropNameInTable="USernameColumn" msprop:Generator_UserColumnName="USername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Active" msprop:Generator_ColumnVarNameInTable="columnActive" msprop:Generator_ColumnPropNameInRow="Active" msprop:Generator_ColumnPropNameInTable="ActiveColumn" msprop:Generator_UserColumnName="Active" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sec_Role" msprop:Generator_TableClassName="sec_RoleDataTable" msprop:Generator_RowEvArgName="sec_RoleRowChangeEvent" msprop:Generator_TableVarName="tablesec_Role" msprop:Generator_TablePropName="sec_Role" msprop:Generator_RowDeletingName="sec_RoleRowDeleting" msprop:Generator_RowChangingName="sec_RoleRowChanging" msprop:Generator_RowEvHandlerName="sec_RoleRowChangeEventHandler" msprop:Generator_RowDeletedName="sec_RoleRowDeleted" msprop:Generator_RowChangedName="sec_RoleRowChanged" msprop:Generator_UserTableName="sec_Role" msprop:Generator_RowClassName="sec_RoleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Srl" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSrl" msprop:Generator_ColumnPropNameInRow="Srl" msprop:Generator_ColumnPropNameInTable="SrlColumn" msprop:Generator_UserColumnName="Srl" type="xs:int" />
+              <xs:element name="RoleTitle" msprop:Generator_ColumnVarNameInTable="columnRoleTitle" msprop:Generator_ColumnPropNameInRow="RoleTitle" msprop:Generator_ColumnPropNameInTable="RoleTitleColumn" msprop:Generator_UserColumnName="RoleTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sec_RoleGroup" msprop:Generator_TableClassName="sec_RoleGroupDataTable" msprop:Generator_RowEvArgName="sec_RoleGroupRowChangeEvent" msprop:Generator_TableVarName="tablesec_RoleGroup" msprop:Generator_TablePropName="sec_RoleGroup" msprop:Generator_RowDeletingName="sec_RoleGroupRowDeleting" msprop:Generator_RowChangingName="sec_RoleGroupRowChanging" msprop:Generator_RowEvHandlerName="sec_RoleGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="sec_RoleGroupRowDeleted" msprop:Generator_RowChangedName="sec_RoleGroupRowChanged" msprop:Generator_UserTableName="sec_RoleGroup" msprop:Generator_RowClassName="sec_RoleGroupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RoleName" msprop:Generator_ColumnVarNameInTable="columnRoleName" msprop:Generator_ColumnPropNameInRow="RoleName" msprop:Generator_ColumnPropNameInTable="RoleNameColumn" msprop:Generator_UserColumnName="RoleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Srl" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnSrl" msprop:Generator_ColumnPropNameInRow="Srl" msprop:Generator_ColumnPropNameInTable="SrlColumn" msprop:Generator_UserColumnName="Srl" type="xs:int" />
+              <xs:element name="Srl_Role" msprop:Generator_ColumnVarNameInTable="columnSrl_Role" msprop:Generator_ColumnPropNameInRow="Srl_Role" msprop:Generator_ColumnPropNameInTable="Srl_RoleColumn" msprop:Generator_UserColumnName="Srl_Role" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sec_Group" />
+      <xs:field xpath="mstns:Srl" />
+    </xs:unique>
+    <xs:unique name="sec_User_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sec_User" />
+      <xs:field xpath="mstns:Srl" />
+    </xs:unique>
+    <xs:unique name="sec_Role_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sec_Role" />
+      <xs:field xpath="mstns:Srl" />
+    </xs:unique>
+    <xs:unique name="sec_RoleGroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sec_RoleGroup" />
+      <xs:field xpath="mstns:Srl" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

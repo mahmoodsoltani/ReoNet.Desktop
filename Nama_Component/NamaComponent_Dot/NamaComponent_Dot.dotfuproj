@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Dotfuscate">
+  <PropertyGroup>
+    <DotfuscatorBinPath>$(MSBuildExtensionsPath)\PreEmptive\Dotfuscator\4.0</DotfuscatorBinPath>
+    <DotfuscatorDataPath>$(MSBuildExtensionsPath)\PreEmptive\Dotfuscator\4.0</DotfuscatorDataPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition="'$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>4.0</ProductVersion>
+    <SchemaVersion>2.1</SchemaVersion>
+    <ProjectGuid>{b15e214f-25bc-4910-a1c5-24f58ffd491f}</ProjectGuid>
+    <ConfigPath>$(Configuration)\Dotfuscator.xml</ConfigPath>
+    <OutputPath>$(Configuration)</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VSConfigurationCount>2</VSConfigurationCount>
+    <VSConfiguration0>Debug</VSConfiguration0>
+    <VSConfiguration1>Release</VSConfiguration1>
+  </PropertyGroup>
+  <ItemGroup>
+    <InputAssembly Include="..\CS_Component\bin\Release\CS_Component.dll">
+      <InputAssemblyType>Assembly</InputAssemblyType>
+    </InputAssembly>
+    <InputAssembly Include="..\VB_Component\bin\Release\VB_Component.dll">
+      <InputAssemblyType>Assembly</InputAssemblyType>
+    </InputAssembly>
+  </ItemGroup>
+  <Import Project="$(DotfuscatorDataPath)\PreEmptive.Dotfuscator.Targets" />
+</Project>
