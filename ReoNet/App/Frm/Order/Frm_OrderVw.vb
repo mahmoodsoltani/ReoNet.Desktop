@@ -125,10 +125,19 @@ Public Class Frm_OrderVw
 
         If dt.Rows(0)("srl_customer") = 860 Then
             rp.SetParameterValue("Link", "www.ompelimomoda.fi")
-            rp.SetParameterValue("ShowLogo", False)
+            rp.SetParameterValue("ShowModa", True)
+            rp.SetParameterValue("ShowReonet", False)
+            rp.SetParameterValue("ShowHomora", False)
+        ElseIf dt.Rows(0)("srl_customer") = 876
+            rp.SetParameterValue("Link", "www.homora.fi")
+            rp.SetParameterValue("ShowModa", False)
+            rp.SetParameterValue("ShowReonet", False)
+            rp.SetParameterValue("ShowHomora", True)
         Else
             rp.SetParameterValue("Link", "www.reonet.fi")
-            rp.SetParameterValue("ShowLogo", True)
+            rp.SetParameterValue("ShowModa", False)
+            rp.SetParameterValue("ShowReonet", True)
+            rp.SetParameterValue("ShowHomora", False)
         End If
         Dim frm_rp As New Frm_RpVw(rp, dt)
         frm_rp.ShowDialog()

@@ -101,7 +101,7 @@ Public Class Frm_Order
     Private Sub Btn_Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Btn_Add.Click
         If Edit_CurrentIndex = -1 Then
             For Each row As DataGridViewRow In DataGridView1.Rows
-                If row.Cells(6).Value = txt_Barcode.Text Then
+                If row.Cells(1).Value.ToString() = txt_Barcode.Text Then
                     MessageBox.Show("The barcode is dublicated!")
                     txt_Barcode.Focus()
                     Return
